@@ -19,15 +19,14 @@ export class AuthService {
       console.error('Error de autenticación');
     }
     this.loggedIn = loggedIn;
+    localStorage.setItem('loggedIn', this.loggedIn.toString());
     return loggedIn;
   }
 
   logout(): void {
     this.loggedIn = false;
+    localStorage.removeItem('loggedIn');
     this.router.navigate(['/login']);
   }
 
-  isLoggedIn(): boolean {
-    return this.loggedIn;
-  }
 }

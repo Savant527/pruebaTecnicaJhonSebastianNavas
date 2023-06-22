@@ -1,0 +1,22 @@
+.header {
+    display: block;
+    box-shadow: 0px 2px 5px rgb(black, .2);
+    > header {
+      padding: 0.5em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        border: 1;
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: darkred;
+      }
+    }
+  }
