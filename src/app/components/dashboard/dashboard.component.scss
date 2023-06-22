@@ -7,7 +7,7 @@
     height: 100vh;
     text-align: center;
     font-family: Arial, sans-serif;
-    margin-top: 20%;
+    margin-top: 10%;
   }
   
   .file-input {
@@ -34,7 +34,7 @@
       box-shadow: 0 0 0 3px rgba(102, 102, 102, 0.3);
     }
   }
-  
+
   .data-container {
     display: flex;
     flex-direction: column;
@@ -48,7 +48,7 @@
   
   .chart {
     width: 100%;
-    height: 400px;
+    height: 100%;
   }
   
   @media (min-width: 768px) {
