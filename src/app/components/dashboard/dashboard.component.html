@@ -1,3 +1,17 @@
 <app-header></app-header>
-<h2>Dashboard</h2>
 
+<div class="container">
+  <div class="file-input">
+    <input type="file" (change)="uploadCSV($event)" accept=".csv">
+  </div>
+
+  <div *ngIf="dataLoaded" class="data-container">
+    <p>Estado con mayor acumulado: {{ highestState }}</p>
+    <p>Estado con menor acumulado: {{ lowestState }}</p>
+    <p>Estado más afectado: {{ mostAffectedState }}</p>
+    <div class="chart">
+      <canvas id="chart">
+      </canvas>
+    </div>
+  </div>
+</div>

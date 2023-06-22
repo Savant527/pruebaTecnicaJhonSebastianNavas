@@ -1,0 +1,81 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 20%;
+  }
+  
+  .file-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input[type='file'] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+    color: #333;
+    margin-bottom: 10%;  
+    &:hover {
+      border-color: #666;
+    }
+  
+    &:focus {
+      outline: none;
+      border-color: #666;
+      box-shadow: 0 0 0 3px rgba(102, 102, 102, 0.3);
+    }
+  }
+  
+  .data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .chart {
+    width: 100%;
+    height: 400px;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      grid-template-columns: 1fr 1fr;
+      height: auto;
+    }
+  
+    .file-input {
+      grid-column: span 2;
+      justify-content: flex-start;
+    }
+  
+    .data-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    p {
+      font-size: 20px;
+    }
+  
+    .chart {
+      width: 100%;
+      height: 300px;
+    }
+  }
+  

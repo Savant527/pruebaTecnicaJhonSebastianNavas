@@ -10,9 +10,24 @@
   justify-items: center;
   text-align: center;
   padding: 20px;
-  background-color: #f1f1f1;
+  background-color: transparent;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  h2 {
+    color: #3f7da7;
+  }
+  input {
+    border: none;
+    border-bottom: 2px solid #D1D1D4;
+    background: none;
+    padding: 10px;
+    padding-left: 24px;
+    font-weight: 700;
+    width: 75%;
+    
+  }
 
   button {
     border: 1;
@@ -22,6 +37,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 1rem;
   }
   button:hover {
     background-color: darkgreen;
