@@ -13,7 +13,7 @@ export class LoginComponent {
   };
 
   constructor(private authService: AuthService) {}
-
+// Iniciar Sesión
   login(): void {
     this.authService.login(this.user.username, this.user.password);
   }

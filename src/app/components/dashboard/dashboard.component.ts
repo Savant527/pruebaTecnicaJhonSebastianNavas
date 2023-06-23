@@ -85,74 +85,26 @@ export class DashboardComponent implements OnInit {
     // Calcular los porcentajes de muertes respecto a la población
     const percentages = this.dashboardService.calculatePercentage(totalDeaths, totalPopulationByState);
 
+    // Poner nombres del respectivo estado en el gráfico
     const stateNames = Array.from(totalPopulationByState.keys());
-
+    
+    // Array con colores
+    const CHART_COLORS = [
+      'red', 'blue', 'green', 'yellow', 'orange', 'purple', 'pink', 'teal', 'brown', 'gray', 'magenta', 'cyan', 'lime',
+      'indigo', 'silver', 'gold', 'navy', 'olive', 'maroon', 'aqua', 'coral', 'violet', 'salmon', 'lightblue',
+      'darkgreen', 'lightpink', 'darkorange', 'lightgray', 'darkred', 'lightgreen', 'darkyellow', 'lightorange',
+      'darkpurple', 'lightteal', 'darkbrown', 'lightmagenta', 'darkcyan', 'lightlime', 'darkindigo', 'lightsilver',
+      'darkgold', 'lightnavy', 'darkolive', 'lightmaroon', 'darkaqua', 'lightcoral', 'darkviolet', 'lightsalmon',
+      'darklightblue', 'darkslategray', 'midnightblue', 'tomato', 'orchid', 'skyblue', 'limegreen', 'slategray',
+      'crimson', 'steelblue'
+    ];
     // Configurar los datos y opciones de la gráfica
     const data = {
       labels: stateNames,
       datasets: [
         {
           data: percentages,
-          backgroundColor: [
-            'red',
-            'blue',
-            'green',
-            'yellow',
-            'orange',
-            'purple',
-            'pink',
-            'teal',
-            'brown',
-            'gray',
-            'magenta',
-            'cyan',
-            'lime',
-            'indigo',
-            'silver',
-            'gold',
-            'navy',
-            'olive',
-            'maroon',
-            'aqua',
-            'coral',
-            'violet',
-            'salmon',
-            'lightblue',
-            'darkgreen',
-            'lightpink',
-            'darkorange',
-            'lightgray',
-            'darkred',
-            'lightgreen',
-            'darkyellow',
-            'lightorange',
-            'darkpurple',
-            'lightteal',
-            'darkbrown',
-            'lightmagenta',
-            'darkcyan',
-            'lightlime',
-            'darkindigo',
-            'lightsilver',
-            'darkgold',
-            'lightnavy',
-            'darkolive',
-            'lightmaroon',
-            'darkaqua',
-            'lightcoral',
-            'darkviolet',
-            'lightsalmon',
-            'darklightblue',
-            'darkslategray',
-            'midnightblue',
-            'tomato',
-            'orchid',
-            'skyblue',
-            'limegreen',
-            'slategray',
-            'crimson',
-            'steelblue'
-          ]
+          backgroundColor: CHART_COLORS.slice(0,stateNames.length)
         }
       ]
     };
@@ -177,5 +129,6 @@ export class DashboardComponent implements OnInit {
         }
       });
     }
+    
   }
 }

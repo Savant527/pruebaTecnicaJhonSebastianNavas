@@ -14,10 +14,7 @@ export class HeaderComponent {
 
   constructor(private authService: AuthService) {}
 
-  
-  login(): void {
-    this.authService.login(this.user.username, this.user.password);
-  }
+  // Cerrar sesión
   logout(): void {
     this.authService.logout();
   }

@@ -8,9 +8,9 @@
   <div *ngIf="dataLoaded" class="data-container">
     <p>Estado con mayor acumulado: {{ highestState }}</p>
     <p>Estado con menor acumulado: {{ lowestState }}</p>
-    <p>Estado más afectado: {{ mostAffectedState }} porque es el estado con mayor población</p>
-    <div class="chart">
-      <canvas id="chart">
+    <p>Estado más afectado: {{ mostAffectedState }} porque la población en este estado es 0 y aún así hubo un acumulado de 3 muertes.</p>
+    <div class="chart-container">
+      <canvas class="chart" id="chart">
       </canvas>
     </div>
   </div>

@@ -10,7 +10,8 @@ export class AuthService {
   private readonly ADMIN_PASSWORD = 'admin';
 
   constructor(private router: Router) {}
-
+  
+// Iniciar Sesión
   login(username: string, password: string): boolean {
     const loggedIn = username === this.ADMIN_USERNAME && password === this.ADMIN_PASSWORD;
     if (loggedIn) {
@@ -23,6 +24,7 @@ export class AuthService {
     return loggedIn;
   }
 
+// Cerrar sesión
   logout(): void {
     this.loggedIn = false;
     localStorage.removeItem('loggedIn');
