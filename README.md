@@ -1,4 +1,4 @@
-# PruebaTecnicaJhonSebastianNavas
+# Prueba TécnicaJhon Sebastian Navas
 
 1. Ejecuta el siguiente comando para iniciar el servidor de desarrollo: ng serve
 2. Abre tu navegador web y accede a http://localhost:4200 para ver el inicio de sesión.
